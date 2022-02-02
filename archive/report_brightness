@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+brightness_level=`brightnessctl | grep Current | awk '{print $4}' | tr -d '()'`
+
+notify-send --expire-time=1500 "Brightness: $brightness_level" -h string:x-canonical-private-synchronous:brightness
+

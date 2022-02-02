@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+notify-send -t 2000 -u critical 'Battery running out!!' -h string:x-canonical-private-synchronous:battery
+paplay /usr/share/sounds/Pop/stereo/alert/battery-low.oga
+

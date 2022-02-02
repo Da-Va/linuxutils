@@ -1,0 +1,36 @@
+#! /usr/bin/env bash
+
+
+# Darpa simulation PCs in 332
+names=(darpa1           darpa2           darpa3)
+ips=(  147.32.83.239    147.32.83.183    147.32.83.196)
+
+n_machines=${#names[@]}
+
+if [[ $# < 1 ]] || [[ $1 -le 0 ]] || [[ $1 -gt $n_machines ]]
+then
+	echo "Argument must be a number between 1 and $n_machines... and there must be and argument." >&2
+	exit 100
+else
+	machine=$(($1-1))
+fi
+
+uname=${names[$machine]}
+ip=${ips[$machine]}
+
+if [[ $# < 2 ]]; then
+	echo "Connecting to $uname@$ip..."
+	ssh -X $uname@$ip
+elif [[ $2 == "mount" ]]; then
+	if [[ ! -e /mnt/$uname ]]; then
+		sudo mkdir /mnt/$uname
+	else
+		echo "tic"
+	fi
+	echo "Mounting $uname@$ip:~ to /mnt/$uname..."
+	sshfs $uname@$ip:~ /mnt/$uname
+
+else
+	echo "Unrecognized command: $2" >&2
+fi
+

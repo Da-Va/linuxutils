@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+buku -p -f 5 | sed 's/\t/ : /g' | rofi -dmenu -i | cut -d ' ' -f 1 | xargs --no-run-if-empty buku -o
+

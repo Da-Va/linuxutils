@@ -1,0 +1,4 @@
+USER=valoudav
+HOST=login.rci.cvut.cz
+
+ssh $USER@$HOST
