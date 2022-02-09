@@ -20,9 +20,10 @@ fi;
 config checkout
 config config status.showUntrackedFiles no
 
-cat >> $HOME/.bashrc << EOF
+grep -q "CONFIG_ALIAS" "$HOME"/.bashrc ||
+cat >> "$HOME"/.bashrc << EOF
 
-# alias for dotfiles git bare repository
+# CONFIG_ALIAS alias for dotfiles git bare repository
 alias config=/usr/bin/git --git-dir="$LOCAL"/ --work-tree="$HOME" "$@"
 source /usr/share/bash-completion/completions/git
 __git_complete config __git_main
