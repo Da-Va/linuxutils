@@ -1,8 +1,14 @@
 #!/bin/sh
 
-STOW_DIR="$(dirname "$0")"
+LINUX_UTILS_DIR="$(dirname "$0")"
+PKG_MAN="sudo apt install -y "
 
-install_to_home() {
+install_pkg() {
+  $PKG_MAN "$@"
+}
+
+STOW_DIR=$LINUX_UTILS_DIR
+stow_to_home() {
   if ! stow --dir="$STOW_DIR" --target="$HOME" "$1" 2> /dev/null; then
     echo "Backing up pre-existing files.";
 
@@ -15,5 +21,7 @@ install_to_home() {
   fi;
 }
 
-install_to_home dotfiles
-install_to_home bin
+install_pkg stow
+
+stow_to_home dotfiles
+stow_to_home bin

@@ -19,14 +19,8 @@ endfunction
 nnoremap <silent> <C-b> :call MyNERDTreeToggle()<CR>
 nnoremap <silent> <C-\> :call Myneoterm_toggle()<CR>
 
-tnoremap <Esc> <C-\><C-n>
 tnoremap <silent> <C-\> <C-\><C-n><C-w>p:Ttoggle<CR>
 
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
-tnoremap <A-p> <C-\><C-n><C-w>p
 
 " Enter terminal in insert mode
 autocmd BufEnter * if &buftype ==# 'terminal' | execute "normal! i" | endif
