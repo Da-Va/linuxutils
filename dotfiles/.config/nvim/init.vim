@@ -1,9 +1,6 @@
 "" Load plugins using Plug
 source $HOME/.config/nvim/plugins.vim
 
-source $HOME/.config/nvim/keybindings.vim
-source $HOME/.config/nvim/tools.vim
-
 "" Line numbers
 set number
 "" Smartcase search
@@ -17,7 +14,8 @@ if (has("termguicolors"))
 	colorscheme onedark
 endif
 
-
+source $HOME/.config/nvim/keybindings.vim
+source $HOME/.config/nvim/tools.vim
 
 lua << EOF
 require('kommentary.config').configure_language("default", {

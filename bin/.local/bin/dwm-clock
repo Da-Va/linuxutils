@@ -1,0 +1,7 @@
+#!/bin/sh
+
+while true; do
+  SLEEP_TIME="$((60 - $(date '+%S')))"
+  xsetroot -name "$(date '+%Y-%m-%d  %H:%M')"
+  sleep $SLEEP_TIME
+done
