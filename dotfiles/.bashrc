@@ -103,8 +103,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias vim='nvim'
 
 # Load n^3 setup
-if [ -f $HOME/.config/nnn/nnnrc ]; then
-    source $HOME/.config/nnn/nnnrc
+if [ -f "$HOME"/.config/nnn/nnnrc ]; then
+    source "$HOME"/.config/nnn/nnnrc
 fi
 
 # enable programmable completion features (you don't need to enable
