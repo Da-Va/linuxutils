@@ -20,6 +20,7 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'navarasu/onedark.nvim'
 
 	"" Lang. server
+	Plug 'neovim/nvim-lspconfig'
 	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	" Plug 'jackguo380/vim-lsp-cxx-highlight'
 call plug#end()

@@ -1,6 +1,7 @@
 "" Load plugins using Plug
 source $HOME/.config/nvim/plugins.vim
 
+set signcolumn=number
 "" Line numbers
 set number
 "" Smartcase search
@@ -17,11 +18,12 @@ endif
 source $HOME/.config/nvim/keybindings.vim
 source $HOME/.config/nvim/tools.vim
 
-lua << EOF
-require('kommentary.config').configure_language("default", {
-	prefer_single_line_comments = true,
-})
-EOF
+lua require('kommentary.config').configure_language("default", {
+	\	prefer_single_line_comments = true,
+	\})
+
+let g:tex_flavor = 'tex'
+lua require('lsp')
 
 "" Gramarous show first error fast
 " let g:grammarous#show_first_error = 0

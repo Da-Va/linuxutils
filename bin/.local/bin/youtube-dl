@@ -1,0 +1,3 @@
+#!/bin/sh
+
+yt-dlp --compat-options youtube-dl "$@"

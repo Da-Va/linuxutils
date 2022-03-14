@@ -10,8 +10,6 @@ nnoremap <A-K> <C-w>+
 nnoremap <A-H> <C-w><
 nnoremap <A-L> <C-w>>
 
-nnoremap <A-`> <C-w>p
-
 nnoremap <leader>b :b<Space>
 
 " Terminal bindings

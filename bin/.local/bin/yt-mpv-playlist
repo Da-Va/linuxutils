@@ -1,0 +1,9 @@
+#! /bin/sh
+
+file="$HOME/Music/playlists.txt"
+height=$(wc -l "$file" | awk '{print $1}')
+prompt="Select playlist:"
+
+url=$(dmenu -l "$height" -p "$prompt" "$@" < "$file" | cut --delimiter="@" --fields=2)
+
+mpv "$url"
