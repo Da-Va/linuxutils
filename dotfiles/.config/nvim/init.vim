@@ -24,6 +24,7 @@ lua require('kommentary.config').configure_language("default", {
 
 let g:tex_flavor = 'tex'
 lua require('lsp')
+" lua require('cmp')
 
 "" Gramarous show first error fast
 " let g:grammarous#show_first_error = 0

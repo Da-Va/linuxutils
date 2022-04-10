@@ -11,8 +11,7 @@ vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<C
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-  -- -- Force signcolumn to prevent text shifting 
-  -- vim.cmd('set signcolumn=yes')
+  vim.cmd('set completeopt-=preview')
 
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
@@ -34,7 +33,7 @@ end
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 -- local servers = { 'pyright', 'rust_analyzer', 'tsserver' }
-local servers = { 'pyright', 'texlab' }
+local servers = { 'jedi_language_server', 'texlab', 'clangd' }
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
