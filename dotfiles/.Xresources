@@ -1,1 +1,32 @@
 Xcursor.size: 16
+
+#include ".Xresources.d/gruvbox.theme"
+
+*.foreground: FOREGROUND
+*.background: BACKGROUND
+*.color0:     COLOR0    
+*.color8:     COLOR8    
+*.color1:     COLOR1    
+*.color9:     COLOR9    
+*.color2:     COLOR2    
+*.color10:    COLOR10   
+*.color3:     COLOR3    
+*.color11:    COLOR11   
+*.color4:     COLOR4    
+*.color12:    COLOR12   
+*.color5:     COLOR5    
+*.color13:    COLOR13   
+*.color6:     COLOR6    
+*.color14:    COLOR14   
+*.color7:     COLOR7    
+*.color15:    COLOR15   
+
+!! URxvt !!
+URxvt*scrollBar: False
+URxvt.font: xft:Mononoki Nerd Font:size=12, \
+            xft:Monospace:style=Medium:size=12
+
+! State:           'bg',         'fg',        'bgalt',      'hlbg',   'hlfg'
+rofi.color-normal: BACKGROUND,   FOREGROUND,  BACKGROUND,   COLOR8,   FOREGROUND
+!                  'background', 'border'
+rofi.color-window: BACKGROUND,   FOREGROUND

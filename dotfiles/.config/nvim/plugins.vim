@@ -18,10 +18,12 @@ call plug#begin(stdpath('data') . '/plugged')
 
 	"" Color theme
 	Plug 'navarasu/onedark.nvim'
+	Plug 'romainl/Apprentice'
 
 	"" Lang. server
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'hrsh7th/nvim-cmp'
+	Plug 'morhetz/gruvbox'
 	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	" Plug 'jackguo380/vim-lsp-cxx-highlight'
 call plug#end()
