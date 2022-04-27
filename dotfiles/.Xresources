@@ -1,6 +1,6 @@
 Xcursor.size: 16
 
-#include ".Xresources.d/gruvbox.theme"
+#include ".Xresources.d/solarized.theme"
 
 *.foreground: FOREGROUND
 *.background: BACKGROUND
@@ -25,6 +25,8 @@ Xcursor.size: 16
 URxvt*scrollBar: False
 URxvt.font: xft:Mononoki Nerd Font:size=12, \
             xft:Monospace:style=Medium:size=12
+
+URxvt.perl-ext-common: font-size
 
 ! State:           'bg',         'fg',        'bgalt',      'hlbg',   'hlfg'
 rofi.color-normal: BACKGROUND,   FOREGROUND,  BACKGROUND,   COLOR8,   FOREGROUND

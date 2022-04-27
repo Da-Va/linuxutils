@@ -24,6 +24,7 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'hrsh7th/nvim-cmp'
 	Plug 'morhetz/gruvbox'
+	Plug 'altercation/vim-colors-solarized'
 	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	" Plug 'jackguo380/vim-lsp-cxx-highlight'
 call plug#end()
