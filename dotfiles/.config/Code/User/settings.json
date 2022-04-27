@@ -2,7 +2,7 @@
     "window.menuBarVisibility": "toggle",
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "One Dark Pro Darker",
+    "workbench.colorTheme": "Solarized Dark",
     "editor.fontFamily": "'Droid Sans Mono', 'monospace', 'mononoki NF', monospace",
     "workbench.startupEditor": "none",
     "telemetry.telemetryLevel": "off",

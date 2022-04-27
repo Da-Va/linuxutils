@@ -29,6 +29,6 @@ URxvt.font: xft:Mononoki Nerd Font:size=12, \
 URxvt.perl-ext-common: font-size
 
 ! State:           'bg',         'fg',        'bgalt',      'hlbg',   'hlfg'
-rofi.color-normal: BACKGROUND,   FOREGROUND,  BACKGROUND,   COLOR8,   FOREGROUND
+rofi.color-normal: BACKGROUND,   FOREGROUND,  BACKGROUND,   FOREGROUND,   BACKGROUND
 !                  'background', 'border'
 rofi.color-window: BACKGROUND,   FOREGROUND
