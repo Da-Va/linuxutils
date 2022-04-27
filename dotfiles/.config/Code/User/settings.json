@@ -1,0 +1,22 @@
+{
+    "window.menuBarVisibility": "toggle",
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "editor.fontFamily": "'Droid Sans Mono', 'monospace', 'mononoki NF', monospace",
+    "workbench.startupEditor": "none",
+    "telemetry.telemetryLevel": "off",
+    "security.workspace.trust.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.rulers": [80],
+    "files.simpleDialog.enable": true,
+    "window.dialogStyle": "custom",
+    "window.zoomLevel": 1,
+    "jupyter.askForKernelRestart": false,
+    "editor.quickSuggestions": {
+        "other": "on",
+        "comments": "on",
+        "strings": "on"
+    }
+}

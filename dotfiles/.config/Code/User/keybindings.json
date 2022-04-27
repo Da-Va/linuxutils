@@ -1,0 +1,49 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "u",
+        "command": "undo",
+        "when": "neovim.mode == normal && editorTextFocus"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "redo",
+        "when": "neovim.mode == normal && editorTextFocus"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "escape",
+        "command": "notifications.clearAll",
+        "when": "neovim.mode == normal && editorTextFocus"
+    },
+    { "key": "ctrl+p",
+      "command": "",
+      "when": "terminalFocus"
+    },
+    { "key": "alt+h",
+      "command": "workbench.action.navigateLeft",
+    },
+    { "key": "alt+j",
+      "command": "workbench.action.navigateDown",
+    },
+    { "key": "alt+k",
+      "command": "workbench.action.navigateUp",
+    },
+    { "key": "alt+l",
+      "command": "workbench.action.navigateRight",
+    },
+    { "key": "ctrl+alt+w",
+      "command": "workbench.action.closeEditorsInGroup"
+    },
+    { "key": "i",
+      "command": "notebook.cell.edit",
+      "when": "notebookCellListFocused && notebookEditable && !inputFocus"
+    },
+    { "key": "escape",
+      "command": "notebook.cell.quitEdit",
+      "when": "inputFocus && notebookEditorFocused && !editorHasMultipleSelections && !editorHasSelection && !editorHoverVisible"
+    },
+]
