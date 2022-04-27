@@ -372,7 +372,10 @@ globalkeys = gears.table.join(
               {description = "brightness down", group = "peripheries"}),
     -- Keyboard layout
     awful.key({"Mod1", "Ctrl"}, "space", kblayout.cycle,
-              {description = "cycle keyboard layout", group = "peripheries"})
+              {description = "cycle keyboard layout", group = "peripheries"}),
+    -- Lock screen
+    awful.key({modkey}, "q", function() awful.spawn({"dm-tool", "lock"}) end,
+              {description = "lock screen", group = "peripheries"})
 )
 
 clientkeys = gears.table.join(
