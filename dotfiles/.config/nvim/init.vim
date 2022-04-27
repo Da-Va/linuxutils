@@ -10,7 +10,9 @@ set smartcase
 set mouse=a
 "" Theme
 " colorscheme apprentice
-colorscheme gruvbox
+" colorscheme gruvbox
+set background=dark
+colorscheme solarized
 " if (has("termguicolors"))
 " 	" set termguicolors
 " 	" let g:onedark_config = { 'style': 'darker'}

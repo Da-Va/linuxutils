@@ -629,7 +629,7 @@ startup = {
         {"udiskie", "-t"},
         {"pasystray", "-a"},
         {"blueman-applet"},
-        {"cbatticon"},
+        -- {"cbatticon"},
         {"owncloud"}
     },
     pids = {}
