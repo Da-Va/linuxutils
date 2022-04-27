@@ -1,5 +1,6 @@
 Xcursor.size: 16
 
+!! -- Colorscheme -- !!
 #include ".Xresources.d/solarized.theme"
 
 *.foreground: FOREGROUND
@@ -21,14 +22,16 @@ Xcursor.size: 16
 *.color7:     COLOR7    
 *.color15:    COLOR15   
 
-!! URxvt !!
+!! -- URxvt -- !!
 URxvt*scrollBar: False
+URxvt.intensityStyles: false
 URxvt.font: xft:Mononoki Nerd Font:size=12, \
             xft:Monospace:style=Medium:size=12
 
 URxvt.perl-ext-common: font-size
 
-! State:           'bg',         'fg',        'bgalt',      'hlbg',   'hlfg'
-rofi.color-normal: BACKGROUND,   FOREGROUND,  BACKGROUND,   FOREGROUND,   BACKGROUND
+!! -- Rofi -- !!
 !                  'background', 'border'
 rofi.color-window: BACKGROUND,   FOREGROUND
+! State:           'bg',         'fg',        'bgalt',      'hlbg',   'hlfg'
+rofi.color-normal: BACKGROUND,   FOREGROUND,  BACKGROUND,   FOREGROUND,   BACKGROUND
