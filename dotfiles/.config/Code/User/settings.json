@@ -18,5 +18,7 @@
         "other": "on",
         "comments": "on",
         "strings": "on"
-    }
+    },
+    "terminal.explorerKind": "external",
+    "terminal.integrated.drawBoldTextInBrightColors": false
 }
