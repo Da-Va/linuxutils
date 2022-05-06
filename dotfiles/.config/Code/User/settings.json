@@ -3,7 +3,7 @@
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Solarized Dark",
-    "editor.fontFamily": "'Droid Sans Mono', 'monospace', 'mononoki NF', monospace",
+    "editor.fontFamily": "'Mononoki Nerd Font', 'Droid Sans Mono', 'monospace', 'mononoki NF', monospace",
     "workbench.startupEditor": "none",
     "telemetry.telemetryLevel": "off",
     "security.workspace.trust.enabled": false,
@@ -18,5 +18,7 @@
         "other": "on",
         "comments": "on",
         "strings": "on"
-    }
+    },
+    "latex-workshop.view.pdf.viewer": "tab",
+    "editor.minimap.enabled": false
 }
