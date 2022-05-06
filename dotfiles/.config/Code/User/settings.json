@@ -19,6 +19,6 @@
         "comments": "on",
         "strings": "on"
     },
-    "latex-workshop.view.pdf.viewer": "tab",
-    "editor.minimap.enabled": false
+    "terminal.explorerKind": "external",
+    "terminal.integrated.drawBoldTextInBrightColors": false
 }
