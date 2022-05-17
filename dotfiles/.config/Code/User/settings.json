@@ -2,8 +2,7 @@
     "window.menuBarVisibility": "toggle",
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Solarized Dark",
-    "editor.fontFamily": "'Droid Sans Mono', 'monospace', 'mononoki NF', monospace",
+    "editor.fontFamily": "'Mononoki Nerd Font', 'Droid Sans Mono', 'monospace', 'mononoki NF', monospace",
     "workbench.startupEditor": "none",
     "telemetry.telemetryLevel": "off",
     "security.workspace.trust.enabled": false,
@@ -20,5 +19,8 @@
         "strings": "on"
     },
     "terminal.explorerKind": "external",
-    "terminal.integrated.drawBoldTextInBrightColors": false
+    "terminal.integrated.drawBoldTextInBrightColors": false,
+    "editor.minimap.renderCharacters": false,
+    "workbench.colorTheme": "Solarized Dark",
+    "latex-workshop.view.pdf.viewer": "tab"
 }
