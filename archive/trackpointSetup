@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# TrackPoint sensitivity tweak
-xinput --set-prop "TPPS/2 Elan TrackPoint" "libinput Accel Speed" -0.4

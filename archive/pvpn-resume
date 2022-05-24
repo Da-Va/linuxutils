@@ -1,5 +1,0 @@
-#!/bin/sh
-
-protonvpn-cli disconnect
-protonvpn-cli reconnect
-

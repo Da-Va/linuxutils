@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-volume_level=`pactl list sinks | grep '^[[:space:]]Volume:' | \
-    head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,'`
-
-notify-send --expire-time=1500 "Volume: $volume_level" -h string:x-canonical-private-synchronous:volume
-

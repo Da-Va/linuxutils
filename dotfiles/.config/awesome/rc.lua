@@ -629,8 +629,9 @@ startup = {
         {"udiskie", "-t"},
         {"pasystray", "-a"},
         {"blueman-applet"},
-        {"cbatticon"},
-        {"owncloud"}
+        -- {"cbatticon"},
+        {"owncloud"},
+        {"autorandr", "-c"}
     },
     pids = {}
 }
