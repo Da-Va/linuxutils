@@ -25,7 +25,7 @@ Xcursor.size: 16
 !! -- URxvt -- !!
 URxvt*scrollBar: False
 URxvt.intensityStyles: false
-URxvt.font: xft:Mononoki Nerd Font:size=12, \
+URxvt.font: xft:Mononoki Nerd Font Mono:size=12, \
             xft:Monospace:style=Medium:size=12
 
 URxvt.perl-ext-common: font-size
