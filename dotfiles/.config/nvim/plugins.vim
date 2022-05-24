@@ -15,6 +15,7 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-sleuth'
 	" Plug 'rhysd/vim-grammarous'
+	Plug 'aserebryakov/vim-todo-lists'
 
 	"" Color theme
 	Plug 'navarasu/onedark.nvim'
