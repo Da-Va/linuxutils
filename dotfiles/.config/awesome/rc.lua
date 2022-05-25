@@ -50,7 +50,6 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(os.getenv("HOME").."/.config/awesome/themes/xresources/theme.lua")
--- beautiful.init(gears.filesystem.get_themes_dir() .. "xresources/theme.lua")
 -- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
@@ -622,7 +621,9 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 --     end
 -- end)
 
--- Startup apps
+-- }}}
+
+-- {{{ Startup apps
 startup = {
     commands = {
         {"nm-applet"},
