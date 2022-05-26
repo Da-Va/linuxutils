@@ -75,3 +75,5 @@
 !! white dark/light
 #define COLOR7                S_base2
 #define COLOR15               S_base3
+
+*.wallpaper:                  ~/.Xresources.d/solarized-landscape.jpg

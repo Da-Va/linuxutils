@@ -56,6 +56,8 @@ beautiful.init(os.getenv("HOME").."/.config/awesome/themes/xresources/theme.lua"
 terminal = "x-terminal-emulator"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
+explorer = "nnn"
+explorer_cmd = terminal .. " -e " .. explorer
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -304,6 +306,8 @@ globalkeys = gears.table.join(
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
+              {description = "open a terminal", group = "launcher"}),
+    awful.key({ modkey,   "Shift" }, "Return", function () awful.spawn(explorer_cmd) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),

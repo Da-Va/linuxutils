@@ -1,6 +1,6 @@
 ---------------------------------------------
 -- Awesome theme which follows xrdb config --
---   by Yauhen Kirylau                    --
+-- based on theme by Yauhen Kirylau        --
 ---------------------------------------------
 
 local theme_assets = require("beautiful.theme_assets")
@@ -116,14 +116,19 @@ end
 local is_dark_bg = (bg_numberic_value < 383)
 
 -- Generate wallpaper:
-local wallpaper_bg = xrdb.color8
-local wallpaper_fg = xrdb.color7
-local wallpaper_alt_fg = xrdb.color12
-if not is_dark_bg then
-    wallpaper_bg, wallpaper_fg = wallpaper_fg, wallpaper_bg
-end
-theme.wallpaper = function(s)
-    return theme_assets.wallpaper(wallpaper_bg, wallpaper_fg, wallpaper_alt_fg, s)
+
+theme.wallpaper = awesome.xrdb_get_value("", "wallpaper")
+
+if not theme.wallpaper then 
+    local wallpaper_bg = xrdb.color8
+    local wallpaper_fg = xrdb.color7
+    local wallpaper_alt_fg = xrdb.color12
+    if not is_dark_bg then
+        wallpaper_bg, wallpaper_fg = wallpaper_fg, wallpaper_bg
+    end
+    theme.wallpaper = function(s)
+        return theme_assets.wallpaper(wallpaper_bg, wallpaper_fg, wallpaper_alt_fg, s)
+    end
 end
 
 return theme
