@@ -632,19 +632,8 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- {{{ Startup apps
-startup = {
-    commands = {
-        {"nm-applet"},
-        {"light-locker"},
-        {"udiskie", "-t"},
-        {"pasystray", "-a"},
-        {"blueman-applet"},
-        -- {"cbatticon"},
-        {"owncloud"},
-        {"autorandr", "-c"}
-    },
-    pids = {}
-}
+local startup = require("startup_apps")
+
 awesome.connect_signal("startup", function()
     for _,a in pairs(startup.commands) do
         pid = awful.spawn(a)
