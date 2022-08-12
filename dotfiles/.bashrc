@@ -117,3 +117,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+#ROS_SETUP
+source /opt/ros/noetic/setup.bash
+#END_ROS_SETUP
+
+alias svns='svn status | (grep -Evf .svnignore 2>/dev/null || cat)'
+alias n=nnn

@@ -95,6 +95,7 @@ myawesomemenu = {
    { "edit config", editor_cmd .. " " .. awesome.conffile },
    { "restart", awesome.restart },
    { "quit", function() awesome.quit() end },
+   { "power", function() os.execute("sleep " .. "0.001"); awful.spawn({"poweroff-dialog"}) end },
 }
 
 local menu_awesome = { "awesome", myawesomemenu, beautiful.awesome_icon }
@@ -379,7 +380,9 @@ globalkeys = gears.table.join(
               {description = "cycle keyboard layout", group = "peripheries"}),
     -- Lock screen
     awful.key({modkey}, "q", function() awful.spawn({"dm-tool", "lock"}) end,
-              {description = "lock screen", group = "peripheries"})
+              {description = "lock screen", group = "peripheries"}),
+    -- Powero button
+    awful.key({}, "XF86PowerOff", function() awful.spawn({"poweroff-dialog"}) end)
 )
 
 clientkeys = gears.table.join(
@@ -503,7 +506,7 @@ root.keys(globalkeys)
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
-      properties = { border_width = 2, --beautiful.border_width,
+      properties = { border_width = beautiful.border_width,
                      border_color = beautiful.border_normal,
                      focus = awful.client.focus.filter,
                      raise = true,

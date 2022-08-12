@@ -17,21 +17,23 @@ local theme = dofile(themes_path.."default/theme.lua")
 theme.font          = "sans 8"
 
 theme.bg_normal     = xrdb.background
-theme.bg_focus      = xrdb.color4
+theme.bg_focus      = xrdb.background
 theme.bg_urgent     = xrdb.color9
 theme.bg_minimize   = xrdb.color11
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = xrdb.foreground
-theme.fg_focus      = theme.bg_normal
+theme.fg_normal     = xrdb.color7
+theme.fg_focus      = xrdb.color4
 theme.fg_urgent     = theme.bg_normal
 theme.fg_minimize   = theme.bg_normal
 
 theme.useless_gap   = dpi(3)
-theme.border_width  = dpi(2)
-theme.border_normal = xrdb.color0
-theme.border_focus  = theme.bg_focus
+theme.border_width  = dpi(1)
+theme.border_normal = xrdb.color8
+theme.border_focus  = xrdb.color8
 theme.border_marked = xrdb.color10
+
+theme.notification_border_color=xrdb.foreground
 
 -- There are other variable sets
 -- overriding the default one when

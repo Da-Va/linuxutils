@@ -46,4 +46,28 @@
       "command": "notebook.cell.quitEdit",
       "when": "inputFocus && notebookEditorFocused && !editorHasMultipleSelections && !editorHasSelection && !editorHoverVisible"
     },
+    {
+      "key": "shift+alt+p",
+      "command": "workbench.action.increaseViewSize"
+    },
+    {
+      "key": "shift+alt+n",
+      "command": "workbench.action.decreaseViewSize"
+    },
+    {
+      "key": "shift+alt+j",
+      "command": "workbench.action.decreaseViewHeight"
+    },
+    {
+      "key": "shift+alt+h",
+      "command": "workbench.action.decreaseViewWidth"
+    },
+    {
+      "key": "shift+alt+k",
+      "command": "workbench.action.increaseViewHeight"
+    },
+    {
+      "key": "shift+alt+l",
+      "command": "workbench.action.increaseViewWidth"
+    },
 ]

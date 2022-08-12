@@ -3,16 +3,14 @@
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
     "workbench.activityBar.visible": false,
     "editor.fontFamily": "'Mononoki Nerd Font', 'Droid Sans Mono', 'monospace', 'mononoki NF', monospace",
-    "workbench.colorTheme": "Solarized Dark",
     "workbench.startupEditor": "none",
     "telemetry.telemetryLevel": "off",
     "security.workspace.trust.enabled": false,
     "extensions.ignoreRecommendations": true,
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
     "editor.rulers": [80],
     "files.simpleDialog.enable": true,
     "window.dialogStyle": "custom",
-    "window.zoomLevel": 1,
     "jupyter.askForKernelRestart": false,
     "editor.quickSuggestions": {
         "other": "on",
@@ -22,6 +20,10 @@
     "terminal.explorerKind": "external",
     "terminal.integrated.drawBoldTextInBrightColors": false,
     "editor.minimap.renderCharacters": false,
-    "latex-workshop.view.pdf.viewer": "tab"
-    "workbench.activityBar.visible": false
+    "latex-workshop.view.pdf.viewer": "tab",
+    "workbench.activityBar.visible": false,
+    "editor.wordWrap": "on",
+    "workbench.colorTheme": "Dracula",
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "git.ignoreLegacyWarning": true
 }

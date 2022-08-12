@@ -1,7 +1,7 @@
 Xcursor.size: 16
 
 !! -- Colorscheme -- !!
-#include ".Xresources.d/solarized.theme"
+#include ".Xresources.d/dracula.theme"
 
 *.foreground: FOREGROUND
 *.background: BACKGROUND

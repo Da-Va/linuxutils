@@ -1,0 +1,14 @@
+#!/bin/sh
+
+ACTION=$(printf "cancel\nsuspend\npoweroff" | dmenu)
+
+case $ACTION in
+	suspend)
+		systemctl suspend
+		;;
+	poweroff)
+		systemctl poweroff
+		;;
+	cancel)
+		;;
+esac

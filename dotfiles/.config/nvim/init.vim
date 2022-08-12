@@ -12,7 +12,8 @@ set mouse=a
 " colorscheme apprentice
 " colorscheme gruvbox
 set background=dark
-colorscheme solarized
+" colorscheme solarized
+colorscheme dracula
 " if (has("termguicolors"))
 " 	" set termguicolors
 " 	" let g:onedark_config = { 'style': 'darker'}

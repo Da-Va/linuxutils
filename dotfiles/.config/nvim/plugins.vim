@@ -20,6 +20,7 @@ call plug#begin(stdpath('data') . '/plugged')
 	"" Color theme
 	Plug 'navarasu/onedark.nvim'
 	Plug 'romainl/Apprentice'
+	Plug 'dracula/vim', { 'as': 'dracula' }
 
 	"" Lang. server
 	Plug 'neovim/nvim-lspconfig'

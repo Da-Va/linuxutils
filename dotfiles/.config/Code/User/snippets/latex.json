@@ -22,6 +22,13 @@
 		],
 		"description": "Create 'watermark' comment header."
 	},
+	"new subsection" : {
+		"prefix": "\\subsection",
+		"body": [
+			"% - subsection ----------------------------------------------------------------",
+			"\\subsection{${1:Subsection Name}}"
+		]
+	},
 	"new section" : {
 		"prefix": "\\section",
 		"body": [
