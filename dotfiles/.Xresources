@@ -1,37 +1,37 @@
 Xcursor.size: 16
 
 !! -- Colorscheme -- !!
-#include ".Xresources.d/dracula.theme"
-
-*.foreground: FOREGROUND
-*.background: BACKGROUND
-*.color0:     COLOR0    
-*.color8:     COLOR8    
-*.color1:     COLOR1    
-*.color9:     COLOR9    
-*.color2:     COLOR2    
-*.color10:    COLOR10   
-*.color3:     COLOR3    
-*.color11:    COLOR11   
-*.color4:     COLOR4    
-*.color12:    COLOR12   
-*.color5:     COLOR5    
-*.color13:    COLOR13   
-*.color6:     COLOR6    
-*.color14:    COLOR14   
-*.color7:     COLOR7    
-*.color15:    COLOR15   
+! #include ".Xresources.d/dracula.theme"
+! 
+! *.foreground: FOREGROUND
+! *.background: BACKGROUND
+! *.color0:     COLOR0    
+! *.color8:     COLOR8    
+! *.color1:     COLOR1    
+! *.color9:     COLOR9    
+! *.color2:     COLOR2    
+! *.color10:    COLOR10   
+! *.color3:     COLOR3    
+! *.color11:    COLOR11   
+! *.color4:     COLOR4    
+! *.color12:    COLOR12   
+! *.color5:     COLOR5    
+! *.color13:    COLOR13   
+! *.color6:     COLOR6    
+! *.color14:    COLOR14   
+! *.color7:     COLOR7    
+! *.color15:    COLOR15   
 
 !! -- URxvt -- !!
-URxvt*scrollBar: False
-URxvt.intensityStyles: false
-URxvt.font: xft:Mononoki Nerd Font Mono:size=12, \
-            xft:Monospace:style=Medium:size=12
-
-URxvt.perl-ext-common: font-size
+! URxvt*scrollBar: False
+! URxvt.intensityStyles: false
+! URxvt.font: xft:Mononoki Nerd Font Mono:size=12, \
+!             xft:Monospace:style=Medium:size=12
+! 
+! URxvt.perl-ext-common: font-size
 
 !! -- Rofi -- !!
 !                  'background', 'border'
-rofi.color-window: BACKGROUND,   FOREGROUND
+! rofi.color-window: BACKGROUND,   FOREGROUND
 ! State:           'bg',         'fg',        'bgalt',      'hlbg',   'hlfg'
-rofi.color-normal: BACKGROUND,   FOREGROUND,  BACKGROUND,   FOREGROUND,   BACKGROUND
+! rofi.color-normal: BACKGROUND,   FOREGROUND,  BACKGROUND,   FOREGROUND,   BACKGROUND

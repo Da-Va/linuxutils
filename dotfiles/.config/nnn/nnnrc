@@ -1,2 +1,2 @@
 [ -n "$NNNLVL" ] && PS1="N$NNNLVL $PS1"
-export NNN_PLUG='c:!code $nnn*'
+export NNN_PLUG='c:!code .*;p:preview-tui'

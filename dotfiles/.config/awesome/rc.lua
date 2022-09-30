@@ -49,7 +49,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(os.getenv("HOME").."/.config/awesome/themes/xresources/theme.lua")
+beautiful.init(os.getenv("HOME").."/.config/awesome/themes/jellybeans/theme.lua")
 -- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
@@ -173,14 +173,15 @@ local tasklist_buttons = gears.table.join(
 
 local function set_wallpaper(s)
     -- Wallpaper
-    if beautiful.wallpaper then
-        local wallpaper = beautiful.wallpaper
-        -- If wallpaper is a function, call it with the screen
-        if type(wallpaper) == "function" then
-            wallpaper = wallpaper(s)
-        end
-        gears.wallpaper.maximized(wallpaper, s, true)
-    end
+    awful.spawn({"nitrogen", "--restore"})
+    -- if beautiful.wallpaper then
+    --     local wallpaper = beautiful.wallpaper
+    --     -- If wallpaper is a function, call it with the screen
+    --     if type(wallpaper) == "function" then
+    --         wallpaper = wallpaper(s)
+    --     end
+    --     gears.wallpaper.maximized(wallpaper, s, true)
+    -- end
 end
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
@@ -248,6 +249,7 @@ kblayout = {
     cycle = function()
         kblayout.idx = kblayout.idx % #kblayout.layouts + 1
         awful.spawn({"setxkbmap", "-layout", kblayout.layouts[kblayout.idx]})
+        awful.spawn({"notify-send", "Keyboard layout", kblayout.layouts[kblayout.idx]})
     end
 }
 

@@ -21,6 +21,8 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'navarasu/onedark.nvim'
 	Plug 'romainl/Apprentice'
 	Plug 'dracula/vim', { 'as': 'dracula' }
+	Plug 'arcticicestudio/nord-vim'
+	Plug 'nanotech/jellybeans.vim'
 
 	"" Lang. server
 	Plug 'neovim/nvim-lspconfig'

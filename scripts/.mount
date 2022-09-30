@@ -1,0 +1,12 @@
+[Unit]
+  Description=Comrob DS cifs mount script
+  Requires=network-online.target
+  After=network-online.service
+
+[Mount]
+  What=//knspace.msad.fel.cvut.cz/13136/Robots
+  Where=/mnt/comrob_ds
+  Type=cifs
+
+[Install]
+  WantedBy=multi-user.target

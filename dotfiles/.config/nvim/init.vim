@@ -1,6 +1,12 @@
 "" Load plugins using Plug
 source $HOME/.config/nvim/plugins.vim
 
+"" Leader == space
+let mapleader = " "
+"" Coppy/paste to/form system buffer
+map <leader>y "+y
+map <leader>p "+p
+
 set signcolumn=number
 "" Line numbers
 set number
@@ -13,7 +19,8 @@ set mouse=a
 " colorscheme gruvbox
 set background=dark
 " colorscheme solarized
-colorscheme dracula
+" colorscheme dracula
+colorscheme jellybeans
 " if (has("termguicolors"))
 " 	" set termguicolors
 " 	" let g:onedark_config = { 'style': 'darker'}

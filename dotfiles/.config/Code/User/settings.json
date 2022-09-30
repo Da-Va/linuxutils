@@ -23,7 +23,13 @@
     "latex-workshop.view.pdf.viewer": "tab",
     "workbench.activityBar.visible": false,
     "editor.wordWrap": "on",
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Jellybeans",
     "latex-workshop.synctex.afterBuild.enabled": true,
-    "git.ignoreLegacyWarning": true
+    "git.ignoreLegacyWarning": true,
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "window.zoomLevel": 1,
+    "editor.minimap.enabled": false
 }
