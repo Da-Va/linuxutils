@@ -27,9 +27,18 @@ colorscheme jellybeans
 " 	" colorscheme onedark
 " endif
 
-lua require('kommentary.config').configure_language("default", {
-	\	prefer_single_line_comments = true,
-	\})
+"" Stop auto commenting
+set formatoptions-=cro
+
+lua require('kommentary.config').configure_language(
+	\ "default", {
+	\	prefer_single_line_comments = true})
+lua require('kommentary.config').configure_language(
+	\ "scad", {
+	\	single_line_comment_string = "//",
+	\	multi_line_comment_string = {"/*", "*/"},
+	\	prefer_single_line_comments = true})
+au! BufRead,BufNewFile *.scad setfiletype scad
 
 source $HOME/.config/nvim/keybindings.vim
 source $HOME/.config/nvim/tools.vim
@@ -40,3 +49,8 @@ source $HOME/.config/nvim/tools.vim
 " 	lua require('lsp')
 " 	" lua require('cmp')  "Currently broken
 " endif
+
+let g:vimwiki_list = [{'path': '~/phd-notes', 'syntax': 'markdown', 'ext': 'md'}]
+
+autocmd BufNewFile,BufRead *.xacro setlocal filetype=xml
+autocmd BufNewFile,BufRead *.launch setlocal filetype=xml

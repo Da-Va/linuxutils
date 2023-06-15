@@ -56,8 +56,11 @@ beautiful.init(os.getenv("HOME").."/.config/awesome/themes/jellybeans/theme.lua"
 terminal = "x-terminal-emulator"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
-explorer = "nnn"
+explorer = "fff"
 explorer_cmd = terminal .. " -e " .. explorer
+
+buku_menu_cmd = "buku_menu"
+buku_new_cmd = terminal .. " -e " .. "buku -w nvim"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -308,14 +311,19 @@ globalkeys = gears.table.join(
         {description = "go back", group = "client"}),
 
     -- Standard program
-    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
+    awful.key({ modkey,           }, "[", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
-    awful.key({ modkey,   "Shift" }, "Return", function () awful.spawn(explorer_cmd) end,
+    awful.key({ modkey,   "Shift" }, "[", function () awful.spawn(explorer_cmd) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
+
+    awful.key({ modkey,           }, "b", function () awful.spawn(buku_menu_cmd) end,
+              {description = "launch buku menu", group = "launcher"}),
+    awful.key({ modkey, "Shift"   }, "b", function () awful.spawn(buku_new_cmd) end,
+              {description = "add buku item", group = "launcher"}),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
@@ -365,6 +373,8 @@ globalkeys = gears.table.join(
     --           {description = "show the menubar", group = "launcher"})
     awful.key({ modkey }, "p", function() awful.spawn({"rofi", "-show", "drun", "-show-icons"}) end,
               {description = "rofi", group = "launcher"}),
+    awful.key({ modkey }, "d", function() awful.spawn({"dmenu_run"}) end,
+              {description = "dmenu_run", group = "launcher"}),
     -- Volume
     awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn({"pactl", "set-sink-volume", "@DEFAULT_SINK@", "+2%"}, false) end,
               {description = "volume up", group = "peripheries"}),
@@ -372,6 +382,15 @@ globalkeys = gears.table.join(
               {description = "volume down", group = "peripheries"}),
     awful.key({}, "XF86AudioMute", function () awful.util.spawn({"pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle"}, false) end,
               {description = "toggle mute", group = "peripheries"}),
+    -- Play/Pause Prev/Next
+    awful.key({}, "XF86AudioPlay", function () awful.util.spawn({"playerctl", "play-pause"}, false) end,
+              {description = "audio play/pause", group = "peripheries"}),
+    awful.key({}, "XF86AudioPause", function () awful.util.spawn({"playerctl", "play-pause"}, false) end,
+              {description = "audio play/pause", group = "peripheries"}),
+    awful.key({}, "XF86AudioPrev", function () awful.util.spawn({"playerctl", "previous"}, false) end,
+              {description = "audio prev", group = "peripheries"}),
+    awful.key({}, "XF86AudioNext", function () awful.util.spawn({"playerctl", "next"}, false) end,
+              {description = "audio next", group = "peripheries"}),
     -- Brightness
     awful.key({}, "XF86MonBrightnessUp", function () awful.util.spawn({"light", "-A", "2"}, false) end,
               {description = "brightness up", group = "peripheries"}),
@@ -400,6 +419,8 @@ clientkeys = gears.table.join(
               {description = "toggle floating", group = "client"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
               {description = "move to master", group = "client"}),
+    awful.key({ modkey,           }, "Return", function() client.focus = awful.client.getmaster(); client.focus:raise() end,
+              {description = "focus master", group = "client"}),
     awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
               {description = "move to screen", group = "client"}),
     awful.key({ modkey,   "Shift" }, "#59",      function (c) c:move_to_screen(c.screen.index-1)               end,

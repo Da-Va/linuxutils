@@ -17,6 +17,8 @@ call plug#begin(stdpath('data') . '/plugged')
 	" Plug 'rhysd/vim-grammarous'
 	Plug 'aserebryakov/vim-todo-lists'
 
+	Plug 'vimwiki/vimwiki'
+
 	"" Color theme
 	Plug 'navarasu/onedark.nvim'
 	Plug 'romainl/Apprentice'

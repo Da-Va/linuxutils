@@ -119,7 +119,30 @@ if ! shopt -oq posix; then
 fi
 #ROS_SETUP
 source /opt/ros/noetic/setup.bash
+source ~/catkin_ws/devel/setup.bash
+# export ROS_MASTER_URI=http://192.168.131.161:11311
+# export ROS_IP=192.168.131.101
 #END_ROS_SETUP
 
 alias svns='svn status | (grep -Evf .svnignore 2>/dev/null || cat)'
 alias n=nnn
+alias vs='code . && exit'
+alias beep='paplay /usr/share/sounds/freedesktop/stereo/complete.oga'
+
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/valoudav/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/valoudav/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/valoudav/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/valoudav/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
