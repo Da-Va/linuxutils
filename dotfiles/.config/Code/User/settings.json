@@ -1,6 +1,6 @@
 {
     "window.menuBarVisibility": "toggle",
-    "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+    "vscode-neovim.neovimExecutablePaths.linux": "/snap/bin/nvim",
     "editor.fontFamily": "'Mononoki Nerd Font', 'Droid Sans Mono', 'monospace', 'mononoki NF', monospace",
     "workbench.startupEditor": "none",
     "telemetry.telemetryLevel": "off",

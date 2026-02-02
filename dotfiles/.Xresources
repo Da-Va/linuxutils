@@ -1,4 +1,5 @@
-Xcursor.size: 16
+Xcursor.size: 40
+Xcursor.theme: Banana
 
 !! -- Colorscheme -- !!
  #include ".Xresources.d/gruvbox.theme"

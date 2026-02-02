@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm-color|*-256color|*-kitty) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -102,10 +102,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # Alias definitions.
 alias vim='nvim'
 
-# Load n^3 setup
-if [ -f "$HOME"/.config/nnn/nnnrc ]; then
-    source "$HOME"/.config/nnn/nnnrc
-fi
+alias pdfread='devour okular'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -117,32 +114,73 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-#ROS_SETUP
-source /opt/ros/noetic/setup.bash
-source ~/catkin_ws/devel/setup.bash
-# export ROS_MASTER_URI=http://192.168.131.161:11311
-# export ROS_IP=192.168.131.101
-#END_ROS_SETUP
-
-alias svns='svn status | (grep -Evf .svnignore 2>/dev/null || cat)'
-alias n=nnn
-alias vs='code . && exit'
-alias beep='paplay /usr/share/sounds/freedesktop/stereo/complete.oga'
 
 
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/valoudav/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/valoudav/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/valoudav/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/valoudav/miniconda3/bin:$PATH"
-    fi
+# >>> ROS init >>>
+# SET_ROS_WS=~/catkin_ws
+# SET_ROS_WS=~/wrench_ws
+# SET_ROS_WS=~/scarab_docking-ws
+# SET_ROS_WS=~/scorpio_ws
+if [ -n "$SET_ROS_WS" ]; then
+    source /opt/ros/noetic/setup.bash
+    source "$SET_ROS_WS"/devel/setup.bash
+    
+    # echo "[ROS] Active workspace: $ROS_WS"
 fi
-unset __conda_setup
-# <<< conda initialize <<<
+# <<< ROS init <<<
 
+PATH="$HOME/.cargo/bin:$PATH"
+eval "$(starship init bash)"
+eval "$(zoxide init --cmd cd bash)"
+
+# PATH="$HOME/miniconda3/bin:$PATH"
+
+# >>> CUSTOM BASH CONFIG >>>
+source /home/valoudav/.config/bash/config.sh # Import custom bash config.
+# <<< CUSTOM BASH CONFIG <<<
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+function pixi_activate() {
+        local manifest_path="$1"
+        local environment="$2"
+
+        source <(pixi shell-hook --frozen --shell bash --manifest-path $manifest_path --environment $environment)
+}
+
+function ros2_shell() {
+    pixi_activate ~/robostack jazzy
+    tmux
+}
+
+#ROS2_WS=~/ros2/artemis_ws
+ROS2_WS=~/ros2/ros2_ws
+# ROS2_WS=~/ros2/hebi-twist-gait_ws
+if [ "$ROS_DISTRO" = jazzy ]; then
+    source  "$ROS2_WS"/install/setup.bash
+    export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/librealsense2.so   # Avoid using librealsense2 in the virtual env.
+
+    eval "$(register-python-argcomplete ros2)"
+    eval "$(register-python-argcomplete colcon)"
+fi
+export ROS_DOMAIN_ID=11
+
+export PATH="/home/valoudav/.pixi/bin:$PATH"
+
+
+alias mm=micromamba
+complete -F _umamba_bash_completions mm
+
+# 
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'micromamba shell init' !!
+export MAMBA_EXE='/home/valoudav/.local/bin/micromamba';
+export MAMBA_ROOT_PREFIX='/home/valoudav/micromamba';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    alias micromamba="$MAMBA_EXE"  # Fallback on help from micromamba activate
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
